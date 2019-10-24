@@ -1,3 +1,4 @@
+# Hint 1
 myWord = "Hello"
 
 choice = input("Type a word: ")
@@ -20,6 +21,7 @@ for l in myWord:
 		print(count)
 	count += 1
 
+# Hint 2
 #how to turn a string to a list
 myString = "arizona"
 myList = list(myString)
@@ -36,3 +38,34 @@ print(guessList)
 # So say the user types r for guess you would
 guessList[1] = "r"
 print(guessList)
+# Hint 3
+secretWord = "christmas"
+secretWord = list(secretWord)
+
+misses = 0
+
+while misses < 7:
+	guess = input("Guess a letter:")
+	if guess in secretWord:
+		# loop through secret word and change guesslist at the correct indexes
+		print("letter is in the word")
+	else:
+		misses += 1
+		print(hangmanList[misses])
+
+		
+print(" GAME OVER, TRY AGAIN ")
+
+# Hint 4
+# How to loop through a string and replace letters
+mystery = list("halloween")
+guessList = list("_________")
+
+guess = input("Guess a letter: ")
+index = 0 
+
+for letter in mystery:
+	if letter == guess:
+		guesslist[index] = guess
+	index += 1
+print(guesslist)
